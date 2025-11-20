@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang=">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport content="width=device-width, initial-scale=1.0">
+<title>document</title>
+</head>
+<style>
+@keyframes ani1
+{
+10%{left:0%;}
+20%{left:0%;}
+
+30%{left:-18%;}
+40%{left:-18%;}
+
+50%{left:-36%;}
+60%{left:-36%;}
+
+70%{left:-54%;}
+80%{left:-54%;}
+
+90%{left:-72%;}
+100%{left:-72%;}
+
+}
+body
+{
+margin:0px;
+padding:0px;
+overflow-x: hidden;
+
+}
+header
+{
+width:600%;
+height:600px;
+margin:auto;
+
+}
+.pic
+{
+width:18%;
+height:100%;
+posotion:relative;
+top:0px;
+margin-left:-10px;
+box-shadow:10px 10px 10px gray;
+animation:ani1 12s infinite;
+
+}
+
+#mask
+{
+over:hidden;
+margin:auto;width:90%;height:600px;
+}
+/*Extra small devices(phones, 600px and down)*/
+@media only screen and(max-width:600px)
+{
+
+
+}
+
+/*Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and(max-width:600px)
+{
+
+
+.pic{height:200px;}
+#mask{height:200px;background:green;}
+}
+
+@media only screen and(min-width:768px)
+{
+
+.pic{height:500px;}
+#mask{height:500px;background:green;}
+}
+
+</style>
+
+<body>
+<div id ="mask">
+
+<header>
+<img src="images/a3.jpg" class="pic">
+<img src="images/a4.jpg" class="pic">
+<img src="images/a5.jpg" class="pic">
+<img src="images/a6.jpg" class="pic">
+<img src="images/a7.jpg" class="pic">
+
+</header>
+</div>
+
+</body>
+</html>

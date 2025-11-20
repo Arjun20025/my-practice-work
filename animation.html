@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html>
+
+<head><title>Animation Ani</title>
+
+</head>
+<style>
+@keyframes ani1
+{
+from{top:0px;}
+to{top:-500px;}
+}
+
+body
+{
+text-align:center;
+}
+
+#col1
+{
+width:30%;
+height:400px;
+margin:auto;
+background:red;
+border:0px magenta ridge;
+//overflow:scroll;
+overflow:hidden;
+overflow:auto;;
+//overflow-x:auto;
+//overflow-y:auto;
+text-align:center;
+
+}
+
+
+.pic
+{
+width:100%;
+
+margin:10px;
+box-shadow:10px 10px 10px gray;
+position:relative;
+top:0px;
+//left:310px;;
+animation:ani1 10s linear infinite alternate;
+}
+
+</style>
+<body>
+<header>
+<h1>HTML Animation </h1>
+</header>
+
+
+<div id="col1">
+
+<img src="images/b1.gif" class="pic">
+
+<img src="images/b2.gif" class="pic">
+</a>
+
+<img src="images/b3.gif" class="pic">
+<img src="images/b4.gif" class="pic">
+
+</div>
+
+</body>
+

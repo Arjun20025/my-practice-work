@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #banner {
+        width: 70%;
+        height: 400px;
+        margin: auto;
+        box-shadow: 10px 10px 10px gray;
+        text-align: center;
+        position: relative;
+      }
+
+      #pic {
+        width: 100%;
+        height: 100%;
+      }
+
+      button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: white;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 10px;
+      }
+
+      #prevBtn {
+        left: 10px;
+      }
+
+      #nextBtn {
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1> Creating Animated banner by GetElement() in JS <h1> -->
+    <div id="banner">
+      <img id="pic" src="p10.jpg" />
+      <button id="prevBtn" onclick="prev()">⇐</button>
+      <button id="nextBtn" onclick="next()">⇒</button>
+    </div>
+
+
+    <script>
+      var p = document.getElementById("pic");
+      var c = 1;
+      var total = 10; // Total number of images
+
+      function changepic() {
+        p.src = "p" + c + ".jpg";
+
+        document.title = "Image " + c;
+      }
+
+      function next() {
+        if (c < total) {
+          c++;
+        } else {
+            c = 1; //Loop back to first image
+        }
+
+        changepic();
+      }
+
+      function prev() {
+        if (c > 1) {
+          c--;
+        } else {
+            c = total; // Loop to last image
+        }
+
+        changepic();
+      }
+    </script>
+  </body>
+</html>

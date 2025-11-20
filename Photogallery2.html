@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Wonders of the World</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background:#4179CC;
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .wonders-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .wonder-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .wonder-card {
+            transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+            transition: all 0.5s ease;
+        }
+        .wonder-card:hover {
+            transform: perspective(1000px) rotateX(5deg) rotateY(5deg) translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .wonder-image-container {
+            height: 220px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .wonder-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 0.8s forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .wonder-card:hover .wonder-image {
+            transform: scale(1.1) rotate(1deg);
+            filter: brightness(1.1) contrast(1.05);
+            transition: all 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        }
+
+        .wonder-content {
+            padding: 1.5rem;
+        }
+
+        .wonder-title {
+            color: #6e48aa;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+        }
+        .wonder-card:hover .wonder-title {
+            color: #9d50bb;
+            transform: translateX(5px);
+        }
+
+        .wonder-location {
+            display: flex;
+            align-items: center;
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .location-icon {
+            margin-right: 0.5rem;
+            color: #9d50bb;
+        }
+
+        .wonder-description {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 3rem 1rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .wonders-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The New 7 Wonders of the World</h1>
+        <p class="subtitle">Discover these magnificent monuments that showcase human creativity and engineering brilliance</p>
+    </header>
+
+    <div class="container">
+        <div class="wonders-container">
+            <!-- Great Wall of China -->
+            <div class="wonder-card">
+                <div class="wonder-image-container">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/78afda5d-a300-4175-9534-ba1f885f88fd.png" alt="Panoramic view of the snaking Great Wall of China through mountainous terrain with lush greenery" class="wonder-image">
+                </div>
+                <div class="wonder-content">
+                    <h2 class="wonder-title">Great Wall of China</h2>
+                    <div class="wonder-location">
+                        <span class="location-icon">📍</span>
+                        <span>Northern China</span>
+                    </div>
+                    <p class="wonder-description">The world's longest wall stretching over 13,000 miles, built over centuries to protect the Chinese Empire from invasions.</p>
+                </div>
+            </div>
+
+            <!-- Petra -->
+            <div class="wonder-card">
+                <div class="wonder-image-container">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/34e74891-de1d-439b-b75e-96aa2628e3d5.png" alt="The iconic Treasury facade carved into rose-red sandstone cliffs in Petra Jordan during golden hour" class="wonder-image">
+                </div>
+                <div class="wonder-content">
+                    <h2 class="wonder-title">Petra</h2>
+                    <div class="wonder-location">
+                        <span class="location-icon">📍</span>
+                        <span>Jordan</span>
+                    </div>
+                    <p class="wonder-description">The ancient Nabatean city famous for its rock-cut architecture and water conduit system, hidden in desert cliffs.</p>
+                </div>
+            </div>
+
+            <!-- Christ the Redeemer -->
+            <div class="wonder-card">
+                <div class="wonder-image-container">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/128141d3-36a6-451b-89fa-3702f58f52bb.png" alt="Majestic Christ the Redeemer statue overlooking Rio de Janeiro from Corcovado mountain with cityscape in background" class="wonder-image">
+                </div>
+                <div class="wonder-content">
+                    <h2 class="wonder-title">Christ the Redeemer</h2>
+                    <div class="wonder-location">
+                        <span class="location-icon">📍</span>
+                        <span>Brazil</span>
+                    </div>
+                    <p class="wonder-description">The iconic Art Deco statue of Jesus Christ with arms outstretched, standing atop Mount Corcovado.</p>
+                </div>
+            </div>
+
+            <!-- Machu Picchu -->
+            <div class="wonder-card">
+                <div class="wonder-image-container">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8d01b9fd-3b30-485b-80bf-7b4f423fbc24.png" alt="Aerial view of ancient Inca city Machu Picchu nestled in misty Andean mountains with terraced fields" class="wonder-image">
+                </div>
+                <div class="wonder-content">
+                    <h2 class="wonder-title">Machu Picchu</h2>
+                    <div class="wonder-location">
+                        <span class="location-icon">📍</span>
+                        <span>Peru</span>
+                    </div>
+                    <p class="wonder-description">The 15th-century Inca citadel set high in the Andes, featuring sophisticated dry-stone construction.</p>
+                </div>
+            </div>
+
+            <!-- Chichen Itza -->
+            <div class="wonder-card">
+                <div class="wonder-image-container">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/76244431-1ff9-4422-9153-384f376b2bfc.png" alt="El Castillo pyramid at Chichen Itza with towering stone steps and intricate carvings under blue sky" class="wonder-image">
+                </div>
+                <div class="wonder-content">
+                    <h2 class="wonder-title">Chichen Itza</h2>
+                    <div class="wonder-location">
+                        <span class="location-icon">📍</span>
+                        <span>Mexico</span>
+                    </div>
+                    <p class="wonder-description">The large Maya city famous for its stepped pyramids demonstrating advanced astronomical knowledge.</p>
+                </div>
+            </div>
+
+            <!-- Roman Colosseum -->
+            <div class="wonder-card">
+                <div class="wonder-image-container">
+                   <a href="p2.html">
+
+<img src="images/p2.jpg" class="pic">
+</a>
+alt="The majestic Roman Colosseum exterior with triple tiers of arches and partial ruins under golden sunlight" class="wonder-image">
+                </div>
+                <div class="wonder-content">
+                    <h2 class="wonder-title">Roman Colosseum</h2>
+                    <div class="wonder-location">
+                        <span class="location-icon">📍</span>
+                        <span>Italy</span>
+                    </div>
+                    <p class="wonder-description">The largest ancient amphitheater ever built, where gladiators once battled before crowds of 50,000.</p>
+                </div>
+            </div>
+
+            <!-- Taj Mahal -->
+            <div class="wonder-card">
+                <div class="wonder-image-container">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8d324871-2a71-4801-8913-9d4921351251.png" alt="The pristine white marble Taj Mahal with reflecting pool and symmetrical gardens at sunrise" class="wonder-image">
+                </div>
+                <div class="wonder-content">
+                    <h2 class="wonder-title">Taj Mahal</h2>
+                    <div class="wonder-location">
+                        <span class="location-icon">📍</span>
+                        <span>India</span>
+                    </div>
+                    <p class="wonder-description">The jewel of Muslim art in India and one of the world's most admired masterpieces of architectural beauty.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Wonders of the World Explorer | All images will be replaced with high-quality versions</p>
+    </footer>
+</body>
+</html>
