@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="padding:10px;position:absolute;color:white;background: gray;box-shadow: 10px 10px; top:0px">Draw </h1>
+    <canvas id="can"> </canvas>
+
+    <script>
+        var can = document.getElementById("can")
+        can.style.backgroundColor="red"
+        var w = window.innerWidth
+        var h = window.innerHeight
+        can.style.width=w+"px"
+        can.style.marginTop = "1px"
+
+        var c = cam.getContext("2d");
+
+       // c.fillRect(0,0,100,100);
+        c.beginPath();
+        c.beginPath();
+        c.arc(50, 10, 0,2* Math.PI);
+        c.stroke();
+        c.fillStyle="red"
+        c.fill()
+
+
+    </script>
+</body>
+</html>
