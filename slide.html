@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+</head>
+<style>
+p{
+    padding: 40px;
+    font-size: 23px;
+    text-align: justify;
+}
+
+#main
+{
+    width:40%;
+    margin: auto;
+}
+div
+{
+    cursor: pointer;
+}
+</style>
+<body>
+   
+    <h1>THAJIWAS GLACIER SONMARG,KASHMIR</h1>
+    <!--
+    jQuery slideDown()
+
+
+Demonstrates the jQuery slideDown() method.
+
+jQuery slideUp()
+Demonstrates the jQuery slideUp() method.
+
+jQuery slideToggle()
+Demonstrates the jQuery slideToggle() method
+$(selector).slideDown(speed,callback);
+-->
+    <div id="main">
+        <div >
+
+            <h1 id="about" style="box-shadow:10px 10px 10px gray ;color:white;background:black;width: 100%;padding:30px;margin-botom:-20px;">About us</h1>
+            <p id="row1">
+                Thajiwas Glacier, located at an altitude of 9,186 feet at a short distance from Sonmarg in Jammu & Kashmir, is enormous and blessed with magnificent beauty. Overlooked by the Thajiwas mountain and surrounded by meadows, conifer trees and frozen lakes, it is one of the most beautiful sights you will ever come across. Tourists visit Thajiwas Glacier for enjoying its breathtaking sights, building snowmen & enjoying a sledding ride. You can also take a short hike to the several waterfalls surrounding the Thajiwas Glacier.
+
+    </div>
+
+     <h1 id="Activity" style="box-shadow:10px 10px 10px gray ;color:white;background:black;width: 100%;padding:30px;margin-botom:-20px;">Activity</h1>
+            <p id="row2">
+                Trekking,sledding,
+                snowman building,photography,enjoying waterfalls. 
+</p>
+<img src="images/vvv.jpg" width="70%">
+
+    </div>
+    
+     <h1 id="Photogallery" style="box-shadow:10px 10px 10px gray ;color:white;background:black;width: 100%;padding:30px;margin-botom:-20px;">Photogallery</h1>
+           
+     photogallery</h1>
+
+     <p id="row3">
+        <img src="images/tt.jpg" width="100%">
+          <img src="images/uuu.jpg" width="100%">
+        <p></p>
+
+              
+    </div>
+</div>
+
+<script>
+    $("#row1").slideUp()
+     $("#row2").slideUp()
+      $("#row3").slideUp()
+
+      $(document).ready(function()
+{
+        $("#about").click(function()
+        {
+            $("row1").slideToggle(1000)
+        })
+
+        $("#policy").click(function()
+        {
+            $("#row2").slideToggle(1000)
+        })
+        $("#photogallery").click(function()
+        {
+            $("#row3").slideToggle(1000)
+        })
+
+    })
+    
+    function myaction()
+    {
+        document.bgcolor ="gray"
+    }
+</script>
+    
+</body>
+</html>
