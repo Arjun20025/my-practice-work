@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>slide</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
-</head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <style>
 p{
     padding: 40px;
@@ -48,6 +47,7 @@ $(selector).slideDown(speed,callback);
 
     </div>
 
+    <div>
      <h1 id="Activity" style="box-shadow:10px 10px 10px gray ;color:white;background:black;width: 100%;padding:30px;margin-botom:-20px;">Activity</h1>
             <p id="row2">
                 Trekking,sledding,
@@ -56,15 +56,15 @@ $(selector).slideDown(speed,callback);
 <img src="images/vvv.jpg" width="70%">
 
     </div>
-    
-     <h1 id="Photogallery" style="box-shadow:10px 10px 10px gray ;color:white;background:black;width: 100%;padding:30px;margin-botom:-20px;">Photogallery</h1>
-           
-     photogallery</h1>
 
-     <p id="row3">
+    <div>
+    
+     <h1 id="Photogallery" style="box-shadow:10px 10px 10px gray ;color:white;background:black;width: 100%;padding:30px;margin-botom:-20px;">
+
+     <p id="row3 ">
         <img src="images/tt.jpg" width="100%">
           <img src="images/uuu.jpg" width="100%">
-        <p></p>
+        </p>
 
               
     </div>
@@ -79,14 +79,14 @@ $(selector).slideDown(speed,callback);
 {
         $("#about").click(function()
         {
-            $("row1").slideToggle(1000)
+            $("#row1").slideToggle(1000)
         })
 
-        $("#policy").click(function()
+        $("#Activity").click(function()
         {
             $("#row2").slideToggle(1000)
         })
-        $("#photogallery").click(function()
+        $("#Photogallery").click(function()
         {
             $("#row3").slideToggle(1000)
         })
